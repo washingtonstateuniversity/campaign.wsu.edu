@@ -13,5 +13,5 @@ add_action( 'spine_enqueue_styles', 'campaign_enqueue_styles', 11 );
  * Enqueue styles other than the default style.css used by the campaign theme.
  */
 function campaign_enqueue_styles() {
-	wp_enqueue_style( 'wsu-campaign-fullpage', get_stylesheet_directory() . '/css/jquery.fullPage.css', array(), spine_get_script_version() );
+	wp_enqueue_style( 'wsu-campaign-fullpage', get_stylesheet_directory_uri() . '/css/jquery.fullPage.css', array(), spine_get_script_version() );
 }
