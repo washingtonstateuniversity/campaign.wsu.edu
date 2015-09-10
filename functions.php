@@ -17,5 +17,5 @@ add_action( 'wp_enqueue_scripts', 'campaign_enqueue_scripts', 11 );
 function campaign_enqueue_scripts() {
 	// This enqueues a script, located in this project's /js/ directory, and tells WordPress
 	// that jQuery is also required. The final parameter - true - loads the script in the footer.
-	wp_enqueue_script( 'wsu-campaign-js', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), spine_get_script_version(), true );
+	wp_enqueue_script( 'wsu-campaign-fullpage-js', get_stylesheet_directory_uri() . '/js/jquery.fullPage.min.js', array( 'jquery' ), spine_get_script_version(), true );
 }
