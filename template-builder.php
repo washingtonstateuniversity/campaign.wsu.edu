@@ -5,15 +5,15 @@
 
 get_header();
 ?>
-	<main class="spine-blank-template" id="fullpage">
+	<main class="spine-blank-template">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part('parts/headers'); ?>
-			<?php get_template_part('parts/featured-images'); ?>
+				<?php get_template_part('parts/featured-images'); ?>
 
-			<div id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php
+					<div id="page-<?php the_ID(); ?> fullpage" <?php post_class(); ?>>
+						<?php
 
 				/**
 				 * `the_content` is fired on builder template pages while it is saved
@@ -25,12 +25,13 @@ get_header();
 				add_filter( 'the_content', 'wpautop', 10 );
 
 				?>
-			</div><!-- #post -->
+					</div>
+					<!-- #post -->
 
-		<?php endwhile; endif; ?>
+					<?php endwhile; endif; ?>
 
-		<?php get_template_part( 'parts/footers' ); ?>
+						<?php get_template_part( 'parts/footers' ); ?>
 
 	</main>
 
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
